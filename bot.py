@@ -16,7 +16,7 @@ class MyClient(discord.Client):
             return
 
         if message.content.startswith('?help'):
-            await message.reply('A quick guide to use the Apartment 4A bot🚀 \nUse the command  ?𝐬𝐮𝐛𝐣𝐞𝐜𝐭𝐧𝐚𝐦𝐞 or  ?𝐬𝐮𝐛𝐣𝐞𝐜𝐭𝐧𝐚𝐦𝐞.𝗮𝗰𝘁𝗶𝗼𝗻 to get the respective resource links \n𝗘𝘅𝗮𝗺𝗽𝗹𝗲\n?chem\n?chem.qp\n?chem.imp\n?chem.note\n?chem.capsule\n?chem.yt\n\n𝗟𝗶𝘀𝘁 𝗼𝗳 𝘀𝘂𝗯𝗷𝗲𝗰𝘁 𝗰𝗼𝗱𝗲𝘀\n1.chem 2.maths\n3.bee 4.bec\n5.bme 6.bce\n7.cp 8.eg\n9.em 10.phy\n11.lifeskill 12.pc\n13.?notif : Latest KTU notifications ', mention_author=True)
+            await message.reply('A quick guide to use the Apartment 4A bot🚀 \nUse the command  ?𝐬𝐮𝐛𝐣𝐞𝐜𝐭𝐧𝐚𝐦𝐞 or  ?𝐬𝐮𝐛𝐣𝐞𝐜𝐭𝐧𝐚𝐦𝐞.𝗮𝗰𝘁𝗶𝗼𝗻 to get the respective resource links \n𝗘𝘅𝗮𝗺𝗽𝗹𝗲\n?chem\n?chem.qp\n?chem.imp\n?chem.note\n?chem.capsule\n?chem.yt\n\n𝗟𝗶𝘀𝘁 𝗼𝗳 𝘀𝘂𝗯𝗷𝗲𝗰𝘁 𝗰𝗼𝗱𝗲𝘀\n1.chem 2.maths\n3.bee 4.bec\n5.bme 6.bce\n7.cp 8.eg\n9.em 10.phy\n11.lifeskill 12.pc\n13.?notif n: To get nth last KTU notification ', mention_author=True)
            
         
 
@@ -219,7 +219,7 @@ class MyClient(discord.Client):
         elif message.content.startswith('?'):
             await message.channel.send('did not get you.. maybe try ?help', mention_author=True)
         elif message.content.startwith('?notif'):
-            await message.channel.send(notif.notifications(),mention_author=True)     
+            await message.channel.send(notif.notifications(int(message.content[-1])),mention_author=True)     
 
 
 
