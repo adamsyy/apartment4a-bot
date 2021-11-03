@@ -219,7 +219,7 @@ class MyClient(discord.Client):
         elif message.content.startswith('?'):
             await message.channel.send('did not get you.. maybe try ?help', mention_author=True)
         elif message.content.startwith('?notif'):
-            await message.channel.send(notif.notifications(int(message.content[-1])),mention_author=True)     
+            await message.channel.send(notif.notifications(message.content[-1]),mention_author=True)     
 
 
 

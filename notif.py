@@ -1,6 +1,10 @@
 import requests
 import json
 def notifications(no=1):
+    try:
+        no=int(no)
+    except:
+        print("ERR:Couldnt convert into interger")
     final_message=""
     final_message_list=[]
     res=json.loads(requests.get("http://ktu.amith.ninja/").text)
