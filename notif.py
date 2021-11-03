@@ -4,7 +4,7 @@ def notifications(no=1):
     try:
         no=int(no)
     except:
-        print("ERR:Couldnt convert into interger")
+        return("please specify a number")
     final_message=""
     final_message_list=[]
     res=json.loads(requests.get("http://ktu.amith.ninja/").text)
