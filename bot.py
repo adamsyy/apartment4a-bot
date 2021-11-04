@@ -1,10 +1,11 @@
 import discord
 import notif
+import os
 import news
 from discord.ext.commands import Bot
 realNews=[]
 newsArray = news.news()
-
+DISCORD_TOKEN = os.environ.get('TOKEN')
 
         
 
@@ -235,4 +236,7 @@ class MyClient(discord.Client):
 
 client = MyClient()
 
-client.run('OTA1NzEzODQwMTc0NTYzMzQ4.YYOFvg.MzgeyLpB_sE9KDdbWqVq673Cr7Y')
+client.run(DISCORD_TOKEN)
+# python enviornment variable
+# token
+ 
