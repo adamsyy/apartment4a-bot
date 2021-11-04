@@ -223,4 +223,4 @@ class MyClient(discord.Client):
         #else:
             #await message.channel.send('didnt get you boi', mention_author=False)
 client = MyClient() 
-client.run('OTA1MTUzMDgyODI3MTA0MzI2.YYF7fw.Z1HzJBTlQmzATmo1eyahbLw-R7A')
+client.run('OTA1MTUzMDgyODI3MTA0MzI2.YYF7fw.tjl4-OYAWG1qe3xZptmSEdUXTZY')
