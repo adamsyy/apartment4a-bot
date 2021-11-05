@@ -1,7 +1,7 @@
 
 # Apartment-4A | Discord Bot For KTU Students 
 
-This Bot provides learning materials fro KTU Students. Also give regular updates on KTU notifications and News
+This Bot provides learning materials for KTU Students. Also give regular updates on KTU notifications and News
 
 
 
