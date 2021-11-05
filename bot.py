@@ -21,6 +21,7 @@ async def help(ctx):
     em.add_field(name="?help", value="Shows this help menu", inline=False)
     em.add_field(name="?help subs", value="Shows the subject codes", inline=False)
     em.add_field(name="/news", value="Get latest news reports about KTU", inline=False)
+    em.add_field(name="/noti", value="To get nth last KTU notification", inline=False)
     em.add_field(name="/q<subject_code>", value="Get question papers of specific subject eg: /qmath2", inline=False)
     em.add_field(name="/imp<subject_code>", value="Get important questions of specific subject eg: /impchem", inline=False)
     em.add_field(name="/notes<subject_code>", value="Get notes of specific subject eg: /notebec", inline=False)
@@ -28,6 +29,7 @@ async def help(ctx):
     em.add_field(name="/cap<subject_code>", value="Get capsules of specific subject eg: /capeg", inline=False)
     em.add_field(name="/yt<subject_code>", value="Get youtube videos of specific subject eg: /ytbee", inline=False)
     em.add_field(name="/show<subject_code>", value="Get everything on specific subject eg: /showphy", inline=False)
+    
     await ctx.send(embed=em)
 @help.command()
 async def subs(ctx):
@@ -417,6 +419,9 @@ async def showpc(ctx):
 @slash.slash(name="showmaths1",description="Maths 1 ")
 async def showmaths1(ctx):
     await ctx.reply("https://www.notion.so/Maths-Sem-One-dc05ea826fde4833afb7ca95eac92f46")
+@slash.slash(name="noti",description="To get nth last KTU notification ")
+async def noti(ctx,n):
+    await ctx.reply(notif.notifications(n))
 
 @slash.slash(name="news",description="Show Latest News About KTU.")
 async def showmaths1(ctx):
