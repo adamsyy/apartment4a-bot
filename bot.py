@@ -11,7 +11,6 @@ load_dotenv()
 realNews=[]
 newsArray = news.news()
 DISCORD_TOKEN = os.environ.get('TOKEN')
-print(DISCORD_TOKEN)
 client = commands.Bot(command_prefix='?')
 
 # help section
