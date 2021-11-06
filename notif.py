@@ -7,7 +7,7 @@ def notifications(no=1):
         return("please specify a number")
     final_message=""
     final_message_list=[]
-    res=json.loads(requests.get("http://ktu.amith.ninja/").text)
+    res=json.loads(requests.get("https://ktunotification.herokuapp.com/").text)
     if(no>10 or no<1):
         return "I can do only the Last 10 Sorry for letting you down"
     i=res["notifications"][no-1]
